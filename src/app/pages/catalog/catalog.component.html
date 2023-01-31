@@ -1,0 +1,17 @@
+<section class="section catalog-section">
+  <div class="content">
+    <h2>Catalog</h2>
+    <div class="tabs">
+      <div class="tab" (click)="toggleTab(true)">Products</div>
+      <div class="tab" (click)="toggleTab(false)">Services</div>
+    </div>
+    <div class="product-grid">
+      <div *ngFor="let product of products">
+        <app-product
+          [product]="product"
+          [showProduct]="toggleTypeOfProduct"
+        ></app-product>
+      </div>
+    </div>
+  </div>
+</section>

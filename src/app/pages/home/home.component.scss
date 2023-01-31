@@ -1,0 +1,54 @@
+.home-section {
+  background: url("https://images.unsplash.com/photo-1598046937895-2be846402c0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-position: center;
+  background-size: cover;
+
+  .content {
+    height: 100%;
+    width: 100%;
+    .hero {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    h1 {
+      font-family: "Poppins";
+      font-weight: 800;
+      font-size: 5.5rem;
+      color: white;
+      max-width: 750px;
+    }
+    .hero-btn {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      padding: 0.4em 0.8em;
+      border: 1px solid red;
+      background: red;
+      border-radius: 4px;
+      border-radius: 10px;
+      font-family: "Poppins";
+      a {
+        font-weight: 800;
+        color: #fff;
+        text-decoration: none;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .content {
+    .hero {
+      h1 {
+        font-size: 4rem;
+      }
+      .hero-btn {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

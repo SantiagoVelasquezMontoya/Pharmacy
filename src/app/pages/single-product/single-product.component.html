@@ -1,0 +1,32 @@
+<section class="section single-product-section">
+  <div class="content">
+    <h2>
+      <a routerLink="/catalog">Go Back</a>
+    </h2>
+    <div class="product-card">
+      <div class="img-container">
+        <img src="{{ product.imageUrl }}" alt="" />
+      </div>
+      <div class="info">
+        <div class="type">{{ product.brand }}</div>
+        <div class="title">{{ product.name }}</div>
+        <div class="tag">Ítem: {{ product.id }}</div>
+        <div class="price">$ {{ product.price | number }}</div>
+        <div class="model">{{ product.description }}</div>
+        <div class="model">Model: {{ product.model }}</div>
+        <div class="model" *ngIf="product.frecuency">
+          Model: {{ product.frecuency }}
+        </div>
+        <div class="size-container">
+          <div class="size" *ngIf="product.measurementUnit">
+            Measurement Unit
+          </div>
+          <div class="sizes" *ngIf="product.measurementUnit">
+            <div class="single-size">{{ product.measurementUnit }}</div>
+          </div>
+        </div>
+        <button class="btn add-btn">Buy now</button>
+      </div>
+    </div>
+  </div>
+</section>

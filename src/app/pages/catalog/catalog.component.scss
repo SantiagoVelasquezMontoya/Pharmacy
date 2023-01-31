@@ -1,0 +1,32 @@
+.catalog-section {
+  font-family: "Poppins";
+  margin-top: 4rem;
+  .content {
+    .product-grid {
+      //   display: grid;
+      //   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      //   place-items: center;
+      //   gap: 10px;
+      //   width: 100%;
+      //   border: 2px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    .tabs {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      margin-bottom: 10px;
+      .tab {
+        border: 2px solid black;
+        padding: 0.4em;
+        background: black;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
