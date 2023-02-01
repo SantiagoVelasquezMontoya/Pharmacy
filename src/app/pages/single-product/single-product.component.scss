@@ -14,6 +14,7 @@
       .img-container {
         height: 100%;
         width: 50%;
+        height: 500px;
         img {
           position: relative;
           width: 100%;
@@ -24,12 +25,12 @@
       .info {
         width: 50%;
         position: relative;
-        .type {
+        .brand {
           font-size: 13px;
           color: #787878;
           font-family: "Gotham", sans-serif;
         }
-        .title {
+        .name {
           margin: 8px 0;
           font-family: "Montserrat", sans-serif;
           font-size: 17px;
@@ -48,25 +49,25 @@
           margin: 20px 0;
           color: #484848;
         }
-        .model {
+        .desc {
           font-family: "Gotham", sans-serif;
           font-size: 14px;
           margin-bottom: 39px;
           color: #484848;
         }
-        .size-container {
-          .size {
+        .measure-container {
+          .measure {
             font-family: "Gotham", sans-serif;
             font-size: 14px;
             color: #484848;
             font-weight: 600;
             margin-bottom: 8px;
           }
-          .sizes {
+          .measures {
             display: flex;
             gap: 15px;
             margin-bottom: 45px;
-            .single-size {
+            .single-measure {
               font-family: "Montserrat", sans-serif;
               background: #fff;
               color: #fff;

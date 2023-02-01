@@ -10,6 +10,7 @@ import ProductArray from 'src/app/ProductArray';
 export class CatalogComponent implements OnInit {
   products: Product[] = ProductArray;
   toggleTypeOfProduct: boolean = true;
+  subTitle: string;
   constructor() {}
 
   ngOnInit(): void {

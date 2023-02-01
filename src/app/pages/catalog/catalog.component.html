@@ -17,6 +17,12 @@
         Services
       </div>
     </div>
+    <h3 *ngIf="toggleTypeOfProduct; else elseTitle" class="tab-title">
+      Products
+    </h3>
+    <ng-template #elseTitle>
+      <h3 class="tab-title">Services</h3>
+    </ng-template>
     <div class="product-grid">
       <div *ngFor="let product of products">
         <app-product

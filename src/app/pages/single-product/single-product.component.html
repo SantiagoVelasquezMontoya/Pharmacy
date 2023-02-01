@@ -8,24 +8,30 @@
         <img src="{{ product.imageUrl }}" alt="" />
       </div>
       <div class="info">
-        <div class="type">{{ product.brand }}</div>
-        <div class="title">{{ product.name }}</div>
+        <div class="brand">{{ product.brand }}</div>
+        <div class="name">{{ product.name }}</div>
         <div class="tag">Ítem: {{ product.id }}</div>
+        <div class="tag">Registry Date: {{ product.registryDate }}</div>
         <div class="price">$ {{ product.price | number }}</div>
-        <div class="model">{{ product.description }}</div>
-        <div class="model">Model: {{ product.model }}</div>
-        <div class="model" *ngIf="product.frecuency">
-          Model: {{ product.frecuency }}
+        <div class="desc">{{ product.description }}</div>
+        <div class="desc">Model: {{ product.model }}</div>
+        <div class="desc" *ngIf="product.frecuency">
+          Frecuency: {{ product.frecuency }}
         </div>
-        <div class="size-container">
-          <div class="size" *ngIf="product.measurementUnit">
+        <div class="measure-container">
+          <div class="measure" *ngIf="product.measurementUnit">
             Measurement Unit
           </div>
-          <div class="sizes" *ngIf="product.measurementUnit">
-            <div class="single-size">{{ product.measurementUnit }}</div>
+          <div class="measures" *ngIf="product.measurementUnit">
+            <div class="single-measure">{{ product.measurementUnit }}</div>
           </div>
         </div>
-        <button class="btn add-btn">Buy now</button>
+        <button class="btn add-btn" *ngIf="product.isProduct; else elseButton">
+          Buy now
+        </button>
+        <ng-template #elseButton>
+          <button class="btn add-btn">Subscribe</button>
+        </ng-template>
       </div>
     </div>
   </div>

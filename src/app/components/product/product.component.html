@@ -2,9 +2,10 @@
   class="product card"
   *ngIf="showProduct && product.isProduct; else elseBlock"
 >
-  <div class="left">
+  <div class="img-container">
     <app-product-image imageUrl="{{ product.imageUrl }}"></app-product-image>
   </div>
+  <div class="left"></div>
   <div class="right">
     <p class="name">{{ product.name }}</p>
     <p class="price">
@@ -17,9 +18,10 @@
 
 <ng-template #elseBlock>
   <div class="service card" *ngIf="!showProduct && !product.isProduct">
-    <div class="left">
+    <div class="img-container">
       <app-product-image imageUrl="{{ product.imageUrl }}"></app-product-image>
     </div>
+    <div class="left"></div>
     <div class="right">
       <p class="name">{{ product.name }}</p>
       <p class="price">
