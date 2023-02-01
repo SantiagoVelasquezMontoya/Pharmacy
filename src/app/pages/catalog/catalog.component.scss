@@ -2,30 +2,32 @@
   font-family: "Poppins";
   margin-top: 4rem;
   .content {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
     .product-grid {
-      //   display: grid;
-      //   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-      //   place-items: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      gap: 10px;
+      //   display: flex;
+      //   flex-wrap: wrap;
       //   gap: 10px;
-      //   width: 100%;
-      //   border: 2px solid red;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 50px;
     }
     .tabs {
       display: flex;
       justify-content: left;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 40px;
       .tab {
         border: 2px solid black;
         padding: 0.4em;
-        background: black;
-        color: #fff;
         cursor: pointer;
+        color: black;
+      }
+      .active {
+        color: #fff;
+        background: black;
       }
     }
   }

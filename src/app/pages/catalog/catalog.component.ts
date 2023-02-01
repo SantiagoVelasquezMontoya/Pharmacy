@@ -12,9 +12,17 @@ export class CatalogComponent implements OnInit {
   toggleTypeOfProduct: boolean = true;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sortProducts();
+  }
 
   toggleTab(state: boolean) {
     this.toggleTypeOfProduct = state;
+    this.sortProducts();
+  }
+  sortProducts() {
+    this.products = ProductArray.filter((product) => {
+      return product.isProduct === this.toggleTypeOfProduct;
+    });
   }
 }

@@ -125,6 +125,14 @@
   }
 }
 
+.goback {
+  text-decoration: none;
+  color: #000044;
+  &:hover {
+    color: green;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .product-card {
     flex-direction: column;
